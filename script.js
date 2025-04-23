@@ -1,0 +1,23 @@
+function getComputerChoice()
+{
+    let rand = Math.random();
+    rand = rand * 10 % 3;
+    rand = parseInt(rand);
+
+    let choice = '';
+    switch (rand)
+    {
+        case 0:
+            choice = 'rock';
+            break;
+        case 1:
+            choice = 'paper';
+            break;
+        case 2:
+            choice = 'scissor';
+            break;
+    }
+    console.log(choice);
+}
+
+getComputerChoice();
