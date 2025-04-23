@@ -28,6 +28,43 @@ function gethumanChoice()
     return choice;
 }
 
-gethumanChoice();
+//gethumanChoice();
 
-console.log(getComputerChoice(), gethumanChoice());
+function playRound(computerSelection , humanSelection)
+{
+    console.log(`You entered ${humanSelection} bot entered ${computerSelection}`);
+    computerSelection = computerSelection.toLowerCase(); 
+    humanSelection = humanSelection.toLowerCase();
+
+    switch (humanSelection)
+    {
+        case "rock":
+            if(computerSelection == "paper")
+            {
+                return "lose";   
+            }
+            return "win";
+            break;
+
+        case "paper":
+            if(computerSelection == "scissors")
+            {
+                return "lose";   
+            }
+            return "win";
+            break;
+
+        case "scissors":
+            if(computerSelection == "rock")
+            {
+                return "lose";   
+            }
+            return "win";
+            break;
+        
+    }
+
+    //console.log(computerSelection);
+}
+
+console.log(playRound(getComputerChoice(), gethumanChoice()));
