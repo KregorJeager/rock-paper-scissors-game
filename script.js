@@ -14,10 +14,20 @@ function getComputerChoice()
             choice = 'paper';
             break;
         case 2:
-            choice = 'scissor';
+            choice = 'scissors';
             break;
     }
-    console.log(choice);
+    return choice;
 }
 
 getComputerChoice();
+
+function gethumanChoice()
+{
+    let choice = prompt('Enter you move(rock, paper, or scissors');
+    return choice;
+}
+
+gethumanChoice();
+
+console.log(getComputerChoice(), gethumanChoice());
