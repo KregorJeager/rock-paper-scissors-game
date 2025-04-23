@@ -67,4 +67,26 @@ function playRound(computerSelection , humanSelection)
     //console.log(computerSelection);
 }
 
-console.log(playRound(getComputerChoice(), gethumanChoice()));
+//console.log(playRound(getComputerChoice(), gethumanChoice()));
+
+function playGame()
+{
+    let humanScore = 0;
+    let computerScore = 0;
+
+    for (let i=0; i<5; ++i)
+    {
+        let outCome = playRound(getComputerChoice(), gethumanChoice());
+        if(outCome == 'lose')
+        {
+            computerScore++;
+        }
+        else
+        {
+            humanScore++;
+        }
+        console.log('Human score ' + humanScore, 'computer score ' + computerScore);
+    }
+}
+
+playGame();
