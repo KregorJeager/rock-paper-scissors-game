@@ -36,6 +36,10 @@ function playRound(computerSelection , humanSelection)
     computerSelection = computerSelection.toLowerCase(); 
     humanSelection = humanSelection.toLowerCase();
 
+    if(computerSelection == humanSelection)
+    {
+        return 'tie';
+    }
     switch (humanSelection)
     {
         case "rock":
@@ -81,10 +85,12 @@ function playGame()
         {
             computerScore++;
         }
-        else
+        else if(outCome == 'win')
         {
             humanScore++;
         }
+        else
+        
         console.log('Human score ' + humanScore, 'computer score ' + computerScore);
     }
 }
